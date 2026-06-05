@@ -1206,14 +1206,19 @@ function buildRealBracket() {
     const winner = getKoWinnerReal(sc, team1, team2);
     return {team1, team2, sc, winner};
   });
-  const r16 = [[0,1],[2,3],[4,5],[6,7],[8,9],[10,11],[12,13],[14,15]].map(([a,b],i) => {
+  // 🔧 FIFA Bracket — Round of 16 eşleşmeleri (FIFA Match 89-96)
+  // R16M1=M90(W73-W75), R16M2=M89(W74-W77), R16M3=M91(W76-W78), R16M4=M92(W79-W80)
+  // R16M5=M93(W83-W84), R16M6=M94(W81-W82), R16M7=M95(W86-W88), R16M8=M96(W85-W87)
+  const r16 = [[0,2],[1,4],[3,5],[6,7],[10,11],[8,9],[13,15],[12,14]].map(([a,b],i) => {
     const team1 = r32[a].winner || {n:`R32M${a+1} galibi`,f:"",resolved:false};
     const team2 = r32[b].winner || {n:`R32M${b+1} galibi`,f:"",resolved:false};
     const sc = T.matchScores[`R16M${i+1}`];
     const winner = getKoWinnerReal(sc, team1, team2);
     return {team1, team2, sc, winner};
   });
-  const qf = [[0,1],[2,3],[4,5],[6,7]].map(([a,b],i) => {
+  // 🔧 FIFA Bracket — Çeyrek Final eşleşmeleri (FIFA Match 97-100)
+  // QFM1=M97(W89-W90), QFM2=M98(W93-W94), QFM3=M99(W91-W92), QFM4=M100(W95-W96)
+  const qf = [[0,1],[4,5],[2,3],[6,7]].map(([a,b],i) => {
     const team1 = r16[a].winner || {n:`R16M${a+1} galibi`,f:"",resolved:false};
     const team2 = r16[b].winner || {n:`R16M${b+1} galibi`,f:"",resolved:false};
     const sc = T.matchScores[`QFM${i+1}`];
@@ -1318,13 +1323,15 @@ function buildParticipantBracket(p) {
     const sc=pScores.koScores?.[`r32_${i}`];
     return {team1:t1, team2:t2, sc:sc||{h:null,a:null}, winner:koW(sc,t1,t2)};
   });
-  const r16 = [[0,1],[2,3],[4,5],[6,7],[8,9],[10,11],[12,13],[14,15]].map(([a,b],i)=>{
+  // 🔧 FIFA Bracket — Round of 16 eşleşmeleri (FIFA Match 89-96)
+  const r16 = [[0,2],[1,4],[3,5],[6,7],[10,11],[8,9],[13,15],[12,14]].map(([a,b],i)=>{
     const t1=r32[a].winner||{n:`?`,f:"",resolved:false};
     const t2=r32[b].winner||{n:`?`,f:"",resolved:false};
     const sc=pScores.koScores?.[`r16_${i}`];
     return {team1:t1,team2:t2,sc:sc||{h:null,a:null},winner:koW(sc,t1,t2)};
   });
-  const qf = [[0,1],[2,3],[4,5],[6,7]].map(([a,b],i)=>{
+  // 🔧 FIFA Bracket — Çeyrek Final eşleşmeleri (FIFA Match 97-100)
+  const qf = [[0,1],[4,5],[2,3],[6,7]].map(([a,b],i)=>{
     const t1=r16[a].winner||{n:`?`,f:"",resolved:false};
     const t2=r16[b].winner||{n:`?`,f:"",resolved:false};
     const sc=pScores.koScores?.[`qf_${i}`];
