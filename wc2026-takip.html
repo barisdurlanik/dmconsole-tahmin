@@ -410,8 +410,8 @@ body::before{content:'';position:fixed;inset:0;
 // ══════════════════════════════════════════════════════════════════════════════
 const ADMIN_PASS = "BDAKSOL";
 
-// Logo emoji-tabanlı, base64 logo kullanılmıyor
-const MCL_LOGO = "";
+// MCL Logo (base64 — tahmin sayfasıyla aynı)
+const MCL_LOGO = "data:image/png;base64,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";
 
 // ══════════════════════════════════════════════════════════════════════════════
 // VERİ YAPISI
@@ -1108,7 +1108,128 @@ const R32_SLOTS = [
 
 const ANNEX_COLS = ["A","B","D","E","G","I","K","L"];
 
-// Grup standings — gerçek maç skorlarından
+// ══════════════════════════════════════════════════════════════════════════════
+// 🆕 FIFA ARTICLE 13 — Resmi 2026 Grup Sıralama Kuralları
+// ══════════════════════════════════════════════════════════════════════════════
+// FIFA Regulations 2026 - Article 13 (sayfa 26) hükümlerine göre:
+//   1. Toplam puan
+//   2. Eşit puanlılar arası → kafa-kafaya puan
+//   3. Eşit puanlılar arası → kafa-kafaya gol farkı
+//   4. Eşit puanlılar arası → kafa-kafaya atılan gol
+//   (Hala eşit kalanlar için 2-3-4 yeniden uygulanır — sadece o alt grupla)
+//   5. Genel gol farkı
+//   6. Genel atılan gol
+//   7. Fair play puanı  ← Bu sistemde EKLENMEDİ (turnuva dışı doğal risk)
+//   8. FIFA dünya sıralaması (Haziran 2026, turnuva öncesi son sıralama)
+//
+// Kaynaklar: FIFA Regulations Page 26, ESPN, Sofascore, FIFA resmi sitesi
+
+// FIFA Dünya Sıralaması — Haziran 2026 (turnuva öncesi son sıralama)
+// Kaynak: ESPN Men's Top 50 (Late Dec 2025) + FIFA Haziran 2026 güncellemesi
+// (Üst-3 swap: Arjantin yukarı, Fransa aşağı; geri kalan stabil)
+const FIFA_RANKING = {
+  "Arjantin": 1, "İspanya": 2, "Fransa": 3, "İngiltere": 4, "Brezilya": 5,
+  "Portekiz": 6, "Hollanda": 7, "Belçika": 8, "Almanya": 9, "Hırvatistan": 10,
+  "Fas": 11, "Kolombiya": 13, "ABD": 14, "Meksika": 15, "Uruguay": 16,
+  "İsviçre": 17, "Japonya": 18, "Senegal": 19, "İran": 20, "Güney Kore": 22,
+  "Ekvador": 23, "Avusturya": 24, "Türkiye": 25, "Avustralya": 26, "Kanada": 27,
+  "Norveç": 29, "Panama": 30, "Cezayir": 34, "Mısır": 35, "İskoçya": 36,
+  "Paraguay": 39, "Tunus": 41, "Fildişi Sah.": 42, "İsveç": 43, "Çekya": 44,
+  "Özbekistan": 50, "Katar": 53, "KD Kongo": 56, "Irak": 58, "S.Arabistan": 60,
+  "Güney Afrika": 61, "Ürdün": 64, "Yeşil Burun": 67, "Bosna Hersek": 71,
+  "Gana": 72, "Curaçao": 82, "Haiti": 84, "Yeni Zelanda": 87,
+};
+
+// Bir takımın FIFA sıralamasını döner; bulunamazsa Infinity (en alt sırada davran)
+function fifaRank(teamName) {
+  return FIFA_RANKING[teamName] !== undefined ? FIFA_RANKING[teamName] : Infinity;
+}
+
+// Yardımcı: Eşit puanlılar arasında "kafa-kafaya" istatistik hesapla
+// Sadece bu alt-grup takımlarının BİRBİRİYLE oynadığı maçlardan
+// Döner: { teamIndex -> {hh_pts, hh_gd, hh_gf} }
+function computeHeadToHead(grp, tiedIndices) {
+  const tiedSet = new Set(tiedIndices);
+  const result = {};
+  tiedIndices.forEach(i => { result[i] = {hh_pts:0, hh_gd:0, hh_gf:0}; });
+
+  GM.forEach(([t1i, t2i], mi) => {
+    if(!tiedSet.has(t1i) || !tiedSet.has(t2i)) return;
+    const code = `G${grp}M${mi+1}`;
+    const sc = T.matchScores[code];
+    if(!sc) return;
+    const h = sc.h, a = sc.a;
+    result[t1i].hh_gf += h;
+    result[t2i].hh_gf += a;
+    result[t1i].hh_gd += (h - a);
+    result[t2i].hh_gd += (a - h);
+    if(h > a) result[t1i].hh_pts += 3;
+    else if(h < a) result[t2i].hh_pts += 3;
+    else { result[t1i].hh_pts++; result[t2i].hh_pts++; }
+  });
+  return result;
+}
+
+// Bir takım grubuna FIFA Article 13 tiebreaker'ı uygula
+// stats: tüm grup takımlarının {i,n,f,pts,gf,ga,...} bilgisi
+// tiedIndices: aynı puana sahip takımların index'leri (en az 2)
+// Döner: sıralanmış indexler (önde olan üstte)
+function applyTiebreaker(grp, stats, tiedIndices) {
+  if(tiedIndices.length <= 1) return tiedIndices.slice();
+
+  // Adım 1-3: Kafa-kafaya hesapla
+  const hh = computeHeadToHead(grp, tiedIndices);
+
+  // Adım 4: Kafa-kafaya puana göre sırala
+  let ordered = tiedIndices.slice().sort((a, b) => {
+    if(hh[b].hh_pts !== hh[a].hh_pts) return hh[b].hh_pts - hh[a].hh_pts;
+    if(hh[b].hh_gd  !== hh[a].hh_gd ) return hh[b].hh_gd  - hh[a].hh_gd;
+    if(hh[b].hh_gf  !== hh[a].hh_gf ) return hh[b].hh_gf  - hh[a].hh_gf;
+    return 0;
+  });
+
+  // Adım 5: H2H sonrası hala eşit kalan alt-grupları bul ve recursive uygula
+  // (FIFA: "the same tiebreakers are applied again, exclusively to the matches between those teams")
+  const finalOrder = [];
+  let i = 0;
+  while(i < ordered.length) {
+    let j = i;
+    // Aynı kafa-kafaya istatistiklerine sahip takımları bul
+    while(j+1 < ordered.length
+          && hh[ordered[j]].hh_pts === hh[ordered[j+1]].hh_pts
+          && hh[ordered[j]].hh_gd  === hh[ordered[j+1]].hh_gd
+          && hh[ordered[j]].hh_gf  === hh[ordered[j+1]].hh_gf) {
+      j++;
+    }
+    if(j === i) {
+      // Bu takım kendi başına ayrıldı
+      finalOrder.push(ordered[i]);
+      i++;
+    } else {
+      // i..j arası takımlar hala eşit
+      const subGroup = ordered.slice(i, j+1);
+      if(subGroup.length === tiedIndices.length) {
+        // Kafa-kafaya HİÇ ayırmadı (hepsi hala eşit) → genel kriterlere düş
+        const fallbackOrdered = subGroup.slice().sort((a, b) => {
+          const gdA = stats[a].gf - stats[a].ga;
+          const gdB = stats[b].gf - stats[b].ga;
+          if(gdB !== gdA) return gdB - gdA;
+          if(stats[b].gf !== stats[a].gf) return stats[b].gf - stats[a].gf;
+          return fifaRank(stats[a].n) - fifaRank(stats[b].n);
+        });
+        fallbackOrdered.forEach(x => finalOrder.push(x));
+      } else {
+        // Alt grup için kafa-kafaya RECURSIVE uygula
+        const subOrdered = applyTiebreaker(grp, stats, subGroup);
+        subOrdered.forEach(x => finalOrder.push(x));
+      }
+      i = j + 1;
+    }
+  }
+  return finalOrder;
+}
+
+// Grup standings — gerçek maç skorlarından (FIFA Article 13 uygulamalı)
 function calcRealStandings(grp) {
   const teams = GROUPS[grp].teams;
   let stats = teams.map((t,i) => ({i,n:t.n,f:t.f,pts:0,gf:0,ga:0,p:0}));
@@ -1124,13 +1245,28 @@ function calcRealStandings(grp) {
     else if(h<a){stats[t2i].pts+=3;}
     else{stats[t1i].pts++;stats[t2i].pts++;}
   });
-  stats.sort((a,b) => {
-    if(b.pts!==a.pts) return b.pts-a.pts;
-    const gdA=a.gf-a.ga, gdB=b.gf-b.ga;
-    if(gdB!==gdA) return gdB-gdA;
-    return b.gf-a.gf;
-  });
-  return stats;
+
+  // Önce puana göre kümele (eşit puanlıları grupla)
+  const indices = stats.map((_,i) => i);
+  indices.sort((a,b) => stats[b].pts - stats[a].pts);
+
+  // Aynı puanlı kümeleri bul ve her birine tiebreaker uygula
+  const finalOrder = [];
+  let i = 0;
+  while(i < indices.length) {
+    let j = i;
+    while(j+1 < indices.length && stats[indices[j+1]].pts === stats[indices[i]].pts) j++;
+    if(j === i) {
+      finalOrder.push(indices[i]);
+    } else {
+      const tied = indices.slice(i, j+1);
+      const ordered = applyTiebreaker(grp, stats, tied);
+      ordered.forEach(x => finalOrder.push(x));
+    }
+    i = j + 1;
+  }
+
+  return finalOrder.map(idx => stats[idx]);
 }
 
 function getRealGroupResult(grp) {
@@ -1139,15 +1275,18 @@ function getRealGroupResult(grp) {
 }
 
 function getRealTop8Thirds() {
+  // FIFA: 3.'ler farklı gruplardan oldukları için kafa-kafaya YOK.
+  // Tiebreaker: puan → genel gol farkı → genel atılan gol → FIFA sıralaması
   const thirds = GROUP_KEYS.map(g => {
     const st = calcRealStandings(g);
     const t = st[2];
     return {g, ...t, gd: t.gf-t.ga};
   });
   thirds.sort((a,b) => {
-    if(b.pts!==a.pts) return b.pts-a.pts;
-    if(b.gd!==a.gd) return b.gd-a.gd;
-    return b.gf-a.gf;
+    if(b.pts !== a.pts) return b.pts - a.pts;
+    if(b.gd  !== a.gd ) return b.gd  - a.gd;
+    if(b.gf  !== a.gf ) return b.gf  - a.gf;
+    return fifaRank(a.n) - fifaRank(b.n);
   });
   return thirds.slice(0,8);
 }
@@ -1206,9 +1345,6 @@ function buildRealBracket() {
     const winner = getKoWinnerReal(sc, team1, team2);
     return {team1, team2, sc, winner};
   });
-  // 🔧 FIFA Bracket — Round of 16 eşleşmeleri (FIFA Match 89-96)
-  // R16M1=M90(W73-W75), R16M2=M89(W74-W77), R16M3=M91(W76-W78), R16M4=M92(W79-W80)
-  // R16M5=M93(W83-W84), R16M6=M94(W81-W82), R16M7=M95(W86-W88), R16M8=M96(W85-W87)
   const r16 = [[0,2],[1,4],[3,5],[6,7],[10,11],[8,9],[13,15],[12,14]].map(([a,b],i) => {
     const team1 = r32[a].winner || {n:`R32M${a+1} galibi`,f:"",resolved:false};
     const team2 = r32[b].winner || {n:`R32M${b+1} galibi`,f:"",resolved:false};
@@ -1216,8 +1352,6 @@ function buildRealBracket() {
     const winner = getKoWinnerReal(sc, team1, team2);
     return {team1, team2, sc, winner};
   });
-  // 🔧 FIFA Bracket — Çeyrek Final eşleşmeleri (FIFA Match 97-100)
-  // QFM1=M97(W89-W90), QFM2=M98(W93-W94), QFM3=M99(W91-W92), QFM4=M100(W95-W96)
   const qf = [[0,1],[4,5],[2,3],[6,7]].map(([a,b],i) => {
     const team1 = r16[a].winner || {n:`R16M${a+1} galibi`,f:"",resolved:false};
     const team2 = r16[b].winner || {n:`R16M${b+1} galibi`,f:"",resolved:false};
@@ -1323,14 +1457,12 @@ function buildParticipantBracket(p) {
     const sc=pScores.koScores?.[`r32_${i}`];
     return {team1:t1, team2:t2, sc:sc||{h:null,a:null}, winner:koW(sc,t1,t2)};
   });
-  // 🔧 FIFA Bracket — Round of 16 eşleşmeleri (FIFA Match 89-96)
   const r16 = [[0,2],[1,4],[3,5],[6,7],[10,11],[8,9],[13,15],[12,14]].map(([a,b],i)=>{
     const t1=r32[a].winner||{n:`?`,f:"",resolved:false};
     const t2=r32[b].winner||{n:`?`,f:"",resolved:false};
     const sc=pScores.koScores?.[`r16_${i}`];
     return {team1:t1,team2:t2,sc:sc||{h:null,a:null},winner:koW(sc,t1,t2)};
   });
-  // 🔧 FIFA Bracket — Çeyrek Final eşleşmeleri (FIFA Match 97-100)
   const qf = [[0,1],[4,5],[2,3],[6,7]].map(([a,b],i)=>{
     const t1=r16[a].winner||{n:`?`,f:"",resolved:false};
     const t2=r16[b].winner||{n:`?`,f:"",resolved:false};
@@ -2379,8 +2511,7 @@ function showToast(msg, type='') {
 (async function init() {
   // Logo
   const logoEl = document.getElementById('hdr-logo');
-  // Logo artık emoji, src atamaya gerek yok
-  // if(logoEl) logoEl.src = MCL_LOGO;
+  if(logoEl) logoEl.src = MCL_LOGO;
 
   // Firebase başlat
   await initFirebase();
